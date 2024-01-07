@@ -77,12 +77,18 @@ const Contact = () => {
           <button type="submit" value="Send" className={style.sendBtn}>
             Send
           </button>
-          {isMailSent && <p style={{ color: "green" }}>Sent Successfully</p>}
-          {error && <p style={{ color: "red" }}>Something went wrong</p>}
-          {enteredDataError && (
-            <p style={{ color: "red" }}>Kindly enter the details properly</p>
-          )}
         </form>
+        {isMailSent && (
+          <p style={{ color: "green", margin: "10px 0" }}>Sent Successfully</p>
+        )}
+        {error && (
+          <p style={{ color: "red", margin: "10px 0" }}>Something went wrong</p>
+        )}
+        {enteredDataError && (
+          <p style={{ color: "red", margin: "10px 0" }}>
+            Kindly enter the details properly
+          </p>
+        )}
       </section>
     </div>
   );
