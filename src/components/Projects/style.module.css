@@ -1,0 +1,102 @@
+.projects {
+  margin-bottom: 10rem;
+  text-align: center;
+  p {
+    font-size: 1.5rem;
+    color: gray;
+  }
+  span {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
+
+.projectCards {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.projectCard {
+  cursor: context-menu;
+  border: 1px solid black;
+  padding: 2rem;
+  border-radius: 50px;
+  transition: all 0.3s;
+  span {
+    font-size: 1.5rem;
+  }
+  p {
+    width: 400px;
+  }
+
+  &:hover {
+    scale: 1.05;
+  }
+}
+
+.projectImage img {
+  width: 400px;
+  border-radius: 20px;
+  transition: all 0.3s;
+
+  &:hover {
+    scale: 1.5;
+  }
+}
+
+.projectTechStack {
+  margin-top: 1rem;
+  p {
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+  }
+  span {
+    font-size: 1rem;
+    color: gray;
+  }
+}
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.projectBtn {
+  padding: 1rem 2rem;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 100vw;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.projectBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .projectImage img {
+    width: 350px;
+  }
+  .projectCard p {
+    width: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  .projectImage img {
+    width: 100%;
+  }
+  .projectCard {
+    width: 90%;
+  }
+  .projectCard p {
+    width: auto;
+  }
+}

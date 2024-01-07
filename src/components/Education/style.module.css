@@ -1,0 +1,73 @@
+.education {
+  margin-top: 10rem;
+  text-align: center;
+
+  p {
+    font-size: 1.5rem;
+    color: gray;
+  }
+
+  span {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
+
+.cards {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.card {
+  text-align: center;
+  width: 30%;
+  padding: 4rem 5rem;
+  border: 1px solid black;
+  border-radius: 50px;
+
+  .icon {
+    text-align: center;
+    font-size: 3rem;
+    transition: all 0.3s;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  span {
+    font-size: 2rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 280px;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+    text-align: center;
+    /* padding: 2rem 4rem; */
+  }
+}
+
+@media (max-width: 1100px) {
+  .cards {
+    margin: auto;
+    margin-top: 2rem;
+    /* width: 600px; */
+  }
+  .card {
+    padding: 2rem 5rem;
+  }
+}
