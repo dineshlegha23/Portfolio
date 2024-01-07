@@ -51,6 +51,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .techCard {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 600px) {
