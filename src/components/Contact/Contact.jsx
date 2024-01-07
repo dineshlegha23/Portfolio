@@ -2,12 +2,27 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import style from "./style.module.css";
 const Contact = () => {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+  const [enteredDataError, setEnteredDataError] = useState();
   const [isMailSent, setIsMailSent] = useState(false);
   const [error, setError] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    // console.log(name.length, email.length, message);
+    if (!name && !email && !message) {
+      setIsMailSent(false);
+      setEnteredDataError(true);
+      return;
+    }
+    if (name?.length < 3 || email?.length < 6 || message?.length < 6) {
+      setIsMailSent(false);
+      setEnteredDataError(true);
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -19,6 +34,8 @@ const Contact = () => {
       .then(
         (result) => {
           setIsMailSent(true);
+          setEnteredDataError(false);
+          setError(false);
         },
         (error) => {
           setError(true);
@@ -37,18 +54,34 @@ const Contact = () => {
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="to_name" placeholder="Enter your name" />
+          <input
+            type="text"
+            name="to_name"
+            placeholder="Enter your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <input
             type="email"
             name="user_email"
             placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <textarea name="message" placeholder="Enter your message" />
+          <textarea
+            name="message"
+            placeholder="Enter your message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
           <button type="submit" value="Send" className={style.sendBtn}>
             Send
           </button>
           {isMailSent && <p style={{ color: "green" }}>Sent Successfully</p>}
           {error && <p style={{ color: "red" }}>Something went wrong</p>}
+          {enteredDataError && (
+            <p style={{ color: "red" }}>Kindly enter the details properly</p>
+          )}
         </form>
       </section>
     </div>
