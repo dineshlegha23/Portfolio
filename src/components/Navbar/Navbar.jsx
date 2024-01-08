@@ -31,7 +31,7 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
         >
           <li>About</li>
           <li>Education</li>
-          <li>Tech Stack</li>
+          <li>Skills</li>
           <li>Projects</li>
           <li>Contact</li>
         </ul>

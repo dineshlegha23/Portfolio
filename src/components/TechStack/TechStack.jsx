@@ -7,9 +7,9 @@ import { IoLogoJavascript } from "react-icons/io5";
 const TechStack = ({ darkTheme }) => {
   return (
     <div className={`container ${darkTheme && style.darkTheme}`}>
-      <section className={style.techStack} id="Tech Stack">
+      <section className={style.techStack} id="Skills">
         <p>Explore my</p>
-        <span>Tech Stack</span>
+        <span>Skills</span>
         <div className={style.techCards}>
           <div className={style.techCard}>
             <FaHtml5 />
