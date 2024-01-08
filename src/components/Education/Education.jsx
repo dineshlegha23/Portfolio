@@ -3,9 +3,9 @@ import { FaUserGraduate } from "react-icons/fa";
 import { GiGraduateCap } from "react-icons/gi";
 import style from "./style.module.css";
 
-const Education = () => {
+const Education = ({ darkTheme }) => {
   return (
-    <div className="container">
+    <div className={`container ${darkTheme && style.darkTheme}`}>
       <div className={style.education} id="Education">
         <p>See my</p>
         <span>Education</span>

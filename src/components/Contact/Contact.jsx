@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import style from "./style.module.css";
-const Contact = () => {
+const Contact = ({ darkTheme }) => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container">
+    <div className={`container ${darkTheme && style.darkTheme}`}>
       <section className={style.contact} id="Contact">
         <div className={style.upper}>
           <p>Get in touch</p>

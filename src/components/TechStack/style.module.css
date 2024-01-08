@@ -75,3 +75,11 @@
     width: 100%;
   }
 }
+
+.darkTheme {
+  background-color: black;
+  color: white;
+  .techCards {
+    border: 1px solid white;
+  }
+}

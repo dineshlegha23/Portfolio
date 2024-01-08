@@ -3,3 +3,8 @@ footer {
   text-align: center;
   color: rgb(83, 83, 83);
 }
+
+.darkTheme {
+  background-color: black;
+  color: white;
+}

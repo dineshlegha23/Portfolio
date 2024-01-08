@@ -4,9 +4,9 @@ import movix from "../../assets/movix.png";
 import postal from "../../assets/postal.png";
 import style from "./style.module.css";
 
-const Projects = () => {
+const Projects = ({ darkTheme }) => {
   return (
-    <div className="container">
+    <div className={`container ${darkTheme && style.darkTheme}`}>
       <div className={style.projects} id="Projects">
         <p>Browse my</p>
         <span>Projects</span>

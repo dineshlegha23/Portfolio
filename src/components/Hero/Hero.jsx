@@ -1,22 +1,20 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import resume from "../../assets/Resume.pdf";
+import hero from "../../assets/hero.png";
 import style from "./style.module.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const Hero = () => {
+const Hero = ({ darkTheme }) => {
   const handleClick = () => {
     const element = document.getElementById("Contact");
     element.scrollIntoView();
   };
   return (
     <div className="container">
-      <div className={style.hero}>
+      <div className={`${style.hero} ${darkTheme && `${style.darkTheme}`}`}>
         <div className={style.image}>
-          <img
-            src="https://img.freepik.com/premium-vector/portrait-hipster-vector-illustration-its-silhouette-isolated-white-background_927585-156.jpg?w=740"
-            alt="profile pic"
-          />
+          <img src={hero} alt="profile pic" />
         </div>
         <div className={style.intro}>
           <p>Hello, I'm</p>

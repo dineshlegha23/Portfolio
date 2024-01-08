@@ -4,9 +4,9 @@ import { FaHtml5, FaCss3Alt, FaGitAlt, FaReact } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 
-const TechStack = () => {
+const TechStack = ({ darkTheme }) => {
   return (
-    <div className="container">
+    <div className={`container ${darkTheme && style.darkTheme}`}>
       <section className={style.techStack} id="Tech Stack">
         <p>Explore my</p>
         <span>Tech Stack</span>

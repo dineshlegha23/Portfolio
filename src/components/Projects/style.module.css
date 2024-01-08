@@ -1,6 +1,7 @@
 .projects {
   margin-bottom: 10rem;
   text-align: center;
+
   p {
     font-size: 1.5rem;
     color: gray;
@@ -98,5 +99,28 @@
   }
   .projectCard p {
     width: auto;
+  }
+}
+
+.darkTheme {
+  background-color: black;
+  color: white;
+
+  .projectCard {
+    border: 1px solid white;
+  }
+
+  .projectTechStack p {
+    color: white;
+  }
+
+  .buttons button {
+    color: white;
+    border: 1px solid white;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
   }
 }

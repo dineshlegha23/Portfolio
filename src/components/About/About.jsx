@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./style.module.css";
 
-const About = () => {
+const About = ({ darkTheme }) => {
   return (
-    <div className="container">
+    <div className={`container ${darkTheme && style.darkTheme}`}>
       <section className={style.center} id="About">
         <p>Know more</p>
         <span className={style.aboutMe}>About Me</span>

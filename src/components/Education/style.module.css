@@ -1,6 +1,7 @@
 .education {
   margin-top: 10rem;
   text-align: center;
+  transition: background-color 1s;
 
   p {
     font-size: 1.5rem;
@@ -53,11 +54,11 @@
     margin-top: 2rem;
     max-width: 280px;
     flex-direction: column;
+    padding: 0 1.5rem;
   }
   .card {
     width: 100%;
     text-align: center;
-    /* padding: 2rem 4rem; */
   }
 }
 
@@ -65,9 +66,18 @@
   .cards {
     margin: auto;
     margin-top: 2rem;
-    /* width: 600px; */
   }
   .card {
     padding: 2rem 5rem;
+  }
+}
+
+.darkTheme {
+  background-color: black;
+  color: white;
+  transition: background-color 1s;
+
+  .card {
+    border: 1px solid white;
   }
 }

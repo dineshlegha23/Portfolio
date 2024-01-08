@@ -7,7 +7,7 @@
   padding-top: 1.7rem;
   margin: auto;
   width: 100%;
-  max-width: 1200px;
+  transition: background-color 1s;
 }
 
 .navLinks {
@@ -60,6 +60,17 @@ li:hover::after {
 
 .logo p {
   font-size: 2.5rem;
+}
+
+i {
+  cursor: pointer;
+  font-size: 2rem;
+  transition: all 1s;
+
+  &:hover {
+    /* rotate: 360deg; */
+    transform: rotate(360deg);
+  }
 }
 
 .hamburger {
@@ -123,5 +134,20 @@ li:hover::after {
     li:last-of-type {
       margin-bottom: 1rem;
     }
+  }
+}
+
+.darkTheme {
+  background-color: black;
+  color: white;
+  transition: background-color 1s;
+
+  li::after,
+  li::before {
+    background-color: white;
+  }
+
+  .mobile {
+    background-color: black;
   }
 }

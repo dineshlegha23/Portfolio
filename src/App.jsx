@@ -10,16 +10,17 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  const [darkTheme, setDarkTheme] = useState(true);
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <TechStack />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+      <Hero darkTheme={darkTheme} />
+      <About darkTheme={darkTheme} />
+      <Education darkTheme={darkTheme} />
+      <TechStack darkTheme={darkTheme} />
+      <Projects darkTheme={darkTheme} />
+      <Contact darkTheme={darkTheme} />
+      <Footer darkTheme={darkTheme} />
     </>
   );
 }

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { FiSun } from "react-icons/fi";
+import { IoMoon } from "react-icons/io5";
 import style from "./style.module.css";
 
-const Navbar = () => {
+const Navbar = ({ darkTheme, setDarkTheme }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleClick = (e) => {
@@ -11,7 +13,11 @@ const Navbar = () => {
   };
   return (
     <div className="container">
-      <nav className={style.navbar}>
+      <nav
+        className={
+          darkTheme ? `${style.navbar} ${style.darkTheme}` : `${style.navbar}`
+        }
+      >
         <div className={style.logo}>
           <p>Dinesh</p>
         </div>
@@ -29,6 +35,9 @@ const Navbar = () => {
           <li>Projects</li>
           <li>Contact</li>
         </ul>
+        <i onClick={() => setDarkTheme(!darkTheme)}>
+          {darkTheme ? <FiSun /> : <IoMoon />}
+        </i>
         <div className={style.hamburger}>
           <RxHamburgerMenu
             className={style.hamburgerIcon}

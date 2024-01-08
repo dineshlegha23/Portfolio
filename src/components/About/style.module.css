@@ -1,6 +1,7 @@
 .center {
   text-align: center;
   margin-top: 8rem;
+  transition: background-color 1s;
 }
 
 .center p {
@@ -63,4 +64,10 @@
     text-align: center;
     flex-direction: column;
   }
+}
+
+.darkTheme {
+  background-color: black;
+  color: white;
+  transition: background-color 1s;
 }

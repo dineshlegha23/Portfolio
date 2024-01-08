@@ -74,3 +74,29 @@ form {
     width: 90%;
   }
 }
+
+.darkTheme {
+  background-color: black;
+  color: white;
+
+  input {
+    background-color: black;
+    color: white;
+    outline: 1px solid white;
+  }
+
+  .sendBtn {
+    color: white;
+    border: 1px solid white;
+
+    &:hover {
+      background-color: rgb(54, 54, 54);
+    }
+  }
+
+  textarea {
+    background-color: black;
+    color: white;
+    outline: 1px solid white;
+  }
+}
