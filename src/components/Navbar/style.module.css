@@ -68,7 +68,6 @@ i {
   transition: all 1s;
 
   &:hover {
-    /* rotate: 360deg; */
     transform: rotate(360deg);
   }
 }
@@ -117,16 +116,23 @@ i {
     }
   }
 
+  i {
+    margin-left: -10%;
+  }
+
   .mobile {
+    z-index: 10;
     position: absolute;
     margin-left: -20px;
     width: 100%;
+    height: auto;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.24);
     top: 60px;
     text-align: center;
     flex-direction: column;
     margin-bottom: 10px;
+    transition: background-color 1s;
 
     li:nth-child(n) {
       padding-block: 1rem;
@@ -140,7 +146,7 @@ i {
 .darkTheme {
   background-color: black;
   color: white;
-  transition: background-color 1s;
+  transition: all 1s;
 
   li::after,
   li::before {
