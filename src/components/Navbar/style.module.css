@@ -50,7 +50,7 @@ li::after {
   position: absolute;
   bottom: -1px;
   right: 0%;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 li:hover::before,
@@ -106,6 +106,9 @@ i {
     display: block;
   }
 
+  i {
+    margin-left: -10%;
+  }
   .hamburger {
     align-self: center;
     display: block;
@@ -116,16 +119,10 @@ i {
     }
   }
 
-  i {
-    margin-left: -10%;
-  }
-
   .mobile {
-    z-index: 10;
     position: absolute;
     margin-left: -20px;
     width: 100%;
-    height: auto;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.24);
     top: 60px;
@@ -134,6 +131,9 @@ i {
     margin-bottom: 10px;
     transition: background-color 1s;
 
+    li i {
+      margin-left: -10%;
+    }
     li:nth-child(n) {
       padding-block: 1rem;
     }
@@ -146,7 +146,7 @@ i {
 .darkTheme {
   background-color: black;
   color: white;
-  transition: all 1s;
+  transition: background-color 1s;
 
   li::after,
   li::before {
@@ -154,6 +154,11 @@ i {
   }
 
   .mobile {
+    transition: background-color 1s;
     background-color: black;
+
+    i {
+      margin-left: -10%;
+    }
   }
 }
