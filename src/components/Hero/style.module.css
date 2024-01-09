@@ -195,4 +195,12 @@
       background-color: rgba(133, 133, 133, 0.904);
     }
   }
+  .github {
+    background: white;
+    border-radius: 50%;
+  }
+  .linkedIn {
+    background-color: white;
+    border-radius: 20%;
+  }
 }
